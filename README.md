@@ -1,3 +1,3 @@
 # PrivateSchoolForms
 
-![intro](/blob/main/screenshots/intro.JPG)
+![intro](/screenshots/intro.JPG)
