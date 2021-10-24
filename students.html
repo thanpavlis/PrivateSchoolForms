@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Μαθητές</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dtsel.css" />
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="divHeader"></div>
+    <div id="mainPage">
+        <div id="divForm" class="divFormStyle">
+            <form id="form" onsubmit="return validateStudentForm()" method="GET">
+                <fieldset>
+                    <legend class="center">Εισαγωγή/Επεξεργασία Μαθητή</legend>
+                    <div class="form-group">
+                        <input id="id" type="hidden" class="form-control" value="" name="id">
+                        <div class="form-group has-danger">
+                            <label>FirstName</label>
+                            <input id="fname" type="text" class="form-control" name="fname" size="100" maxlength="100"
+                                placeholder="FirstName">
+                            <div class="invalid-feedback">Το όνομα είναι υποχρεωτικό !</div>
+                        </div>
+                        <div class="form-group has-danger">
+                            <label>LastName</label>
+                            <input id="lname" type="text" class="form-control" name="lname" size="100" maxlength="100"
+                                placeholder="LastName">
+                            <div class="invalid-feedback">Το επώνυμο είναι υποχρεωτικό !</div>
+                        </div>
+                        <div class="form-group has-danger">
+                            <label>DateOfBirth</label>
+                            <input id="dob" class="form-control" name="dob" placeholder="Date Of Birth"
+                                onkeydown="return false">
+                            <div class="invalid-feedback">Η ημερομηνία γέννησης είναι υποχρεωτική και &gt;&#61;18 !
+                            </div>
+                        </div>
+                        <div class="form-group has-danger">
+                            <label>TuitionFees</label>
+                            <input id="fees" type="number" class="form-control" name="fees" placeholder="TuitionFees">
+                            <div class="invalid-feedback">Τα δίδακτρα είναι υποχρεωτικά &gt;&#61;0 και
+                                &lt;&#61;1.000.000 !
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="divButtons">
+                    <button type="submit" class="btn btn-primary">Αποθήκευση</button>
+                    <button type="button" id="cancel" class="btn btn-warning" onclick="hideForm()">Άκυρο</button>
+                    <button type="reset" id="reset" class="btn btn-danger" onclick="hideWrongData()">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div id="divTable" class="center">
+            <div id="insert">
+                <h1 id="label">Μαθητές</h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-primary insert" onclick="showForm()">Εισαγωγή
+                    Μαθητή</button>
+            </div>
+            <table class="table table-hover size">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>DateOfBirth</th>
+                        <th>TuitionFees</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Thodoris</td>
+                        <td>Michalopoulos</td>
+                        <td>17/06/1993</td>
+                        <td>4000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Nikos</td>
+                        <td>Arxontos</td>
+                        <td>15/08/1990</td>
+                        <td>3000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Giannhs</td>
+                        <td>Marinakis</td>
+                        <td>18/12/1992</td>
+                        <td>2500</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Iwanna</td>
+                        <td>Sanida</td>
+                        <td>13/10/1981</td>
+                        <td>2000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Athina</td>
+                        <td>Papadopoulou</td>
+                        <td>05/03/2000</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Gewrgia</td>
+                        <td>Zotou</td>
+                        <td>11/01/1985</td>
+                        <td>1300</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Poph</td>
+                        <td>Rhna</td>
+                        <td>15/09/2002</td>
+                        <td>4500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="divFooter"></div>
+    <script src="js/dtsel.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            setStudentPicker();
+            setNumCheck('fees');
+            lockNumberFieldMouseWheel('fees');
+            studentsTableClickable();
+            alert("Πατήστε σε μία γραμμή του πίνακα για επεξεργασία, αν πατήσεις την ίδια δυο φορές ακυρώνεται η επεξεργασία !");
+        });
+    </script>
+</body>
+
+</html>

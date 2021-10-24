@@ -1,0 +1,158 @@
+.center {
+  text-align: center;
+}
+
+.brandTextSize {
+  font-size: 25px;
+}
+
+.navItemTextSize {
+  font-size: 25px;
+}
+
+.dropdownTextSize {
+  font-size: 20px;
+}
+
+li {
+  padding-left: 10px;
+}
+
+#footer {
+  font-size: 30px;
+  height: 100%;
+  color: white;
+}
+
+h1 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+img.logo {
+  width: 250px;
+}
+
+/*afairesh twn spins to ebala gia to type=number*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+table.size {
+  width: 90%;
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+th,
+td {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+tr {
+  border: 3px solid rgb(0, 0, 0);
+}
+
+thead {
+  background-color: red;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgb(238, 176, 176);
+}
+tbody tr:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+}
+
+#divTable,
+#divTableMain,
+#divTableRel {
+  margin-top: 40px;
+}
+
+#divFooter {
+  margin-top: 50px;
+}
+
+.divFormStyle {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  display: none;
+}
+
+label {
+  margin-top: 10px;
+}
+
+legend {
+  font-size: 35px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#divForm {
+  display: none;
+}
+
+#form {
+  width: 40%;
+  margin: auto;
+}
+
+#insert {
+  display: inline-flex;
+}
+
+button.insert {
+  height: 40px;
+  margin: auto;
+}
+
+#wrong {
+  max-width: 40%;
+  margin: auto;
+  display: none;
+}
+
+h4.card-title {
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.divButtons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+table > tbody > tr.selected {
+  background: rgb(65, 227, 248);
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#main {
+  background-image: url("../images/java.png");
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
