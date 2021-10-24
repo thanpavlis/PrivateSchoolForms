@@ -1,3 +1,3 @@
 # PrivateSchoolForms
 
-![intro](https://github.com/thanpavlis/screenshots/intro.jpg)
+![intro](https://github.com/thanpavlis/PrivateSchoolForms/blob/main/screenshots/intro.JPG)
